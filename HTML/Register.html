@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+  <a href="Home.html" class="logo-btn"><h1>C’Groovy</h1></a>
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li>
+        <a href="#">Pages</a>
+        <ul class="dropdown">
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="Collection.html">Song Collection</a></li>
+          <li><a href="Detail.html">Songs Detail</a></li>
+          <li><a href="Register.html">Register</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="register-container">
+      <form id="registerForm" autocomplete="off">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="nameError"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span class="error" id="passwordError"></span>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1">
+        <span class="error" id="ageError"></span>
+
+        <div class="gender-group">
+          <label>Gender</label><br>
+          <input type="radio" id="male" name="gender" value="Male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="Female">
+          <label for="female">Female</label>
+        </div>
+        <span class="error" id="genderError"></span>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    
+    <footer>
+      &copy; 2025 C’Groovy Music. All rights reserved.
+    </footer>
+    <script src="./scriptRegister.js"></script>
+</body>
+</html>
