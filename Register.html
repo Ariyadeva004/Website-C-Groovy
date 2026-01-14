@@ -1,68 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="C’Groovy Music — create an account to start your music journey."
+    />
+    <title>Register | C’Groovy Music</title>
+
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
     <header>
-  <a href="index.html" class="logo-btn"><h1>C’Groovy</h1></a>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="#">Pages</a>
-        <ul class="dropdown">
-          <li><a href="AboutUs.html">About Us</a></li>
-          <li><a href="Collection.html">Song Collection</a></li>
-          <li><a href="Detail.html">Songs Detail</a></li>
-          <li><a href="Register.html">Register</a></li>
+      <a href="index.html" class="logo-btn" aria-label="Go to Home">
+        <h1>C’Groovy</h1>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#" aria-haspopup="true" aria-expanded="false">Pages</a>
+            <ul class="dropdown">
+              <li><a href="AboutUs.html">About Us</a></li>
+              <li><a href="Collection.html">Song Collection</a></li>
+              <li><a href="Detail.html">Songs Detail</a></li>
+              <li>
+                <a href="Register.html" aria-current="page">Register</a>
+              </li>
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
-  </nav>
-</header>
-<div class="register-container">
-      <form id="registerForm" autocomplete="off">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <span class="error" id="nameError"></span>
+      </nav>
+    </header>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <span class="error" id="emailError"></span>
+    <main>
+      <section class="register-container" aria-label="Register form">
+        <h2>Create your account</h2>
+        <p>Fill in your details to register.</p>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <span class="error" id="passwordError"></span>
+        <!-- IDs below are required by your merged Javascript/script.js -->
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+              minlength="3"
+            />
+            <small class="error" id="nameError" aria-live="polite"></small>
+          </div>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="1">
-        <span class="error" id="ageError"></span>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="name@example.com"
+              autocomplete="email"
+              required
+            />
+            <small class="error" id="emailError" aria-live="polite"></small>
+          </div>
 
-        <div class="gender-group">
-          <label>Gender</label><br>
-          <input type="radio" id="male" name="gender" value="Male">
-          <label for="male">Male</label>
-          <input type="radio" id="female" name="gender" value="Female">
-          <label for="female">Female</label>
-        </div>
-        <span class="error" id="genderError"></span>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Min 6 chars + 1 number"
+              autocomplete="new-password"
+              required
+              minlength="6"
+            />
+            <small class="error" id="passwordError" aria-live="polite"></small>
+          </div>
 
-        <button type="submit">Register</button>
-      </form>
-    </div>
-    
-    <footer>
-      &copy; 2025 C’Groovy Music. All rights reserved.
-    </footer>
-    <script src="Javascript/script.js"></script>
-</body>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              id="age"
+              name="age"
+              type="number"
+              placeholder="10 - 100"
+              min="10"
+              max="100"
+              required
+            />
+            <small class="error" id="ageError" aria-live="polite"></small>
+          </div>
 
+          <fieldset class="form-group">
+            <legend>Gender</legend>
+            <div class="radio-group">
+              <label>
+                <input id="male" type="radio" name="gender" value="male" />
+                Male
+              </label>
+              <label>
+                <input id="female" type="radio" name="gender" value="female" />
+                Female
+              </label>
+            </div>
+            <small class="error" id="genderError" aria-live="polite"></small>
+          </fieldset>
+
+          <button type="submit" class="cta-button">Register</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 C’Groovy Music. All rights reserved.</footer>
+
+    <!-- Your merged script is still named script.js -->
+    <script src="Javascript/script.js" defer></script>
+  </body>
 </html>
-
-
-
