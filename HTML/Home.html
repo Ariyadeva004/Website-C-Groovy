@@ -6,7 +6,7 @@
     <title>Home C’Groovy Music</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <header>
@@ -32,9 +32,9 @@
       <div class="slider">
         <button id="left-button" class="btn">Left</button>
         <div class="slides">
-          <img src="image/7 Years.webp" alt="7 Years" class="active">
-          <img src="image/Memories - Maroon 5.jpg" alt="Memories">
-          <img src="image/Times Album- Ed Sheeran.jpeg" alt="Photograph">
+          <img src="Asset/image/7 Years.webp" alt="7 Years" class="active">
+          <img src="Asset/image/Memories - Maroon 5.jpg" alt="Memories">
+          <img src="Asset/image/Times Album- Ed Sheeran.jpeg" alt="Photograph">
         </div>
         <button id="right-button" class="btn">Right</button>
       </div>
@@ -68,8 +68,8 @@
       &copy; 2025 C’Groovy Music. All rights reserved.
     </footer>
 
-    <audio id="audio-player" src="audio/7years.mp3"></audio>
-    <script src="script.js"></script>
+    <audio id="audio-player" src="Asset/Song/7years.mp3"></audio>
+    <script src="Javascript/script.js"></script>
     <script>
       document.getElementById('play-btn').onclick = function() {
         var audio = document.getElementById('audio-player');
@@ -81,4 +81,5 @@
       };
     </script>
 </body>
+
 </html>
